@@ -1,11 +1,10 @@
 //Setting Todays Date To Show On Jumbotron
+function displayDate() {}
 var today = moment();
 console.log(today);
 $("#currentDay").text(today.format("MMM Do, YYYY"));
 
-//var hour = moment();
-//console.log(hour);
-//$(".hour").text(hour.format("HH"));
+
 //set variables on hours to change color based on if it is past present or future.
 
 
@@ -16,8 +15,8 @@ $("#currentDay").text(today.format("MMM Do, YYYY"));
  // Saves entries in planner to local storage   
 
  
-var timeBlock = document.getElementsByClassName("form-control");
-var saveButton = document.getElementsByClassName("save-btn");
+var timeBlock = document.getElementsByClassName(".form-control");
+var saveButton = document.querySelectorAll(".save-btn")
 
 function saveLastToDo (){
     toDo ={
@@ -27,43 +26,22 @@ localStorage.setItem("toDo", JSON.stringify(toDo));
 }
 
 function renderLastToDo() {
-    lastToDo = JSON.parse(localstorage.getItem("toDo"));
+    lastToDo = JSON.parse(localStorage.getItem("toDo"));
 
 }
 
-saveButton.addEventListener("click", function(event) {
+saveButton.forEach(item => {
+item.addEventListener("click", function(event) {
 event.preventDefault();
 saveLastToDo();
 renderLastToDo();
 });
 
-function init(){
-
-    renderLastToDo();
-}
-init();
-
-
-//     var toDo = {
-//         stuffToDo: timeBlockInput.value.trim(),
-//     };
-
-//     localStorage.setItem("to-do", JSON.stringify(toDo));
-
-// },
-
-// function renderLastToDo() {
-//     lastToDo = JSON.parse(localStorage.getItem("to-do"));
-//     if (lastToDo !== null){
-//     document.    
-
-//     }
-
-// },
+})
 
 
 
 
-
+    
 
 
