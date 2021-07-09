@@ -1,3 +1,5 @@
+![Day Planner](https://user-images.githubusercontent.com/81760763/125037196-10936500-e051-11eb-8b0c-24fdf8763449.png)
+![Day Planner 2](https://user-images.githubusercontent.com/81760763/125037202-11c49200-e051-11eb-9212-e5fa052302f5.png)
 # js-day-planner
 
 Welcome to my day planner! 
